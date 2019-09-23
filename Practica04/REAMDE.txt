@@ -1,0 +1,16 @@
+				
+					PRÁCTICA04
+	Dentro de la carpeta se encuentra el archivo README.txt junto al directorio src que contiene dos paquetes: el paquete shapesSVG y el paquete main.
+    Para compilar una clase que se encuentra dentro del paquete shapesSVG se compila de la siguiente manera:
+		javac shapesSVG/nombreClase.java
+    Ya que este paquete contiene las clases para la construcción de figuras, no es necesario ejecutar ninguna clase.
+
+    Para compilar el paquete main que contiene la clase Main.java se escribe lo siguiente:
+		javac main/Main.java
+
+    Para ejecutar el paquete main se debe escribir:
+		java main.Main
+
+    Al momento de ejecutar La clase Main regresará texto para imprimir figuras en formato SVG, para que las figuras puedan visualizarse en formato html se escribe lo siguiente:
+		java main.Main > nombreArchivo.html
+    El nombre que se le dé al archivo html es a elección del usuario. Una vez creado el archivo html, se ejecuta y se abrirá una pestaña del navegador donde se podrán observar las figuras.
