@@ -1,9 +1,10 @@
 package shapesSVG;
+
 /**
 * Clase que modela una línea
 * @author Armando Ramírez González
 */
-public class Linea{
+public class Linea extends Shape{
   //Atributos
   private Vector2 v1;
   private Vector2 v2;

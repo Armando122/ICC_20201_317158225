@@ -3,12 +3,10 @@ package shapesSVG;
 * Clase que modela un círculo
 * @author Armando Ramírez González
 */
-public class Circulo{
-  //atributos
+public class Circulo extends Shape{
+  //Atributos
   private Vector2 centro;
   private double radio;
-  private double perimetro2;
-  private double area2;
 
   /**
   * Constructor de un círculo que no recibe parámetros.
@@ -18,8 +16,8 @@ public class Circulo{
   public Circulo(){
     this.centro = new Vector2(60.0,60.0);
     this.radio = 50.0;
-    this.perimetro2 = 2.0 * this.radio + Math.PI;
-    this.area2 = (Math.PI*Math.pow(this.radio,2))/2.0;
+    this.perimetro = 2.0 * this.radio + Math.PI;
+    this.area = (Math.PI*Math.pow(this.radio,2))/2.0;
   }
 
   /**
@@ -31,8 +29,8 @@ public class Circulo{
   public Circulo(Vector2 centro1, double radio1){
     this.centro = new Vector2(centro1);
     this.radio = radio1;
-    this.perimetro2 = 2.0 * this.radio + Math.PI;
-    this.area2 = (Math.PI*Math.pow(this.radio,2))/2.0;
+    this.perimetro = 2.0 * this.radio + Math.PI;
+    this.area = (Math.PI*Math.pow(this.radio,2))/2.0;
   }
 
   /**
@@ -45,8 +43,8 @@ public class Circulo{
   public Circulo(double x1, double y1, double radio1){
     this.centro = new Vector2(x1,y1);
     this.radio = radio1;
-    this.perimetro2 = 2.0 * this.radio + Math.PI;
-    this.area2 = (Math.PI*Math.pow(this.radio,2))/2.0;
+    this.perimetro = 2.0 * this.radio + Math.PI;
+    this.area = (Math.PI*Math.pow(this.radio,2))/2.0;
   }
 
   /**
@@ -68,7 +66,7 @@ public class Circulo{
   @Override
   public String toString(){
     String p = new String(centro.getX()+" "+centro.getY()+", "+this.radio+", \n"
-    +"Perímetro: "+this.perimetro2+". Área: "+this.area2);
+    +"Perímetro: "+this.perimetro+". Área: "+this.area);
     return p;
   }
 

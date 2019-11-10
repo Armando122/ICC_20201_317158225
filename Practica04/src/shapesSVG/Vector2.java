@@ -3,7 +3,7 @@ package shapesSVG;
 * Clase que modela un punto
 * @author Armando Ramírez González
 */
-public class Vector2{
+public class Vector2 extends Shape{
   //Atributos
   private double x;
   private double y;

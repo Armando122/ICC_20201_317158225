@@ -1,12 +1,18 @@
+import java.util.Iterator;
 
 /**
 * Clase que modela una matriz
 *
 * @author Armando Ramírez
 */
-public class Matrix{
+public class Matrix implements Iterable<Matrix>{
   //Atributos
   private int[][] matriz;
+
+  public Iterator<Matrix> iterator() {
+    Iterator i = new MatrixIterator();
+    return i;
+  }
 
   /**
   * Constructor para una matriz vacía de n filas por m columnas que recibe:
@@ -26,6 +32,37 @@ public class Matrix{
   */
   public Matrix(int[][] array){
     this.matriz = array;
+  }
+
+  /**
+  *
+  */
+  protected class MatrixIterator implements Iterator<Matrix>{
+    protected int posicionArray;
+
+    public MatrixIterator(){
+      this.posicionArray = 0;
+    }
+
+    public boolean hasNext(){
+      boolean resul;
+      if(this.posicionArray < (matriz[0]).length){
+        resul = true;
+      } else {
+        resul = false;
+      }
+      return resul;
+    }
+
+    public Matrix next(){
+      this.posicionArray++;
+      int[][] aux = new int[0][this.posicionArray-1];
+      return new Matrix(aux);
+    }
+
+    public void remove(){
+      throw new UnsupportedOperationException("No disponible.");
+    }
   }
 
   /**

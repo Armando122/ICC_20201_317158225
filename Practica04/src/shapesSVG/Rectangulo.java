@@ -3,13 +3,11 @@ package shapesSVG;
 * Clase que modela un rectángulo
 * @author Armando Ramírez González
 */
-public class Rectangulo{
+public class Rectangulo extends Shape{
   //Atributos
   private Vector2 a;
   private double ancho;
   private double alto;
-  private double perimetro;
-  private double area;
 
   /**
   * Constructor de un rectángulo que no recibe parametros
