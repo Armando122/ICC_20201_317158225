@@ -42,6 +42,10 @@ public abstract class Piece{
     return 1;
   }
 
+  public void nullify(){
+    this.legalMoves=null;
+  }
+
   /**
   * Método getPosition
   *

@@ -19,6 +19,7 @@ class Writter {
       //Archivo de salida
       Path pathO = Paths.get("csvPolar.txt");
       List<String> lines = Files.readAllLines(path);
+      String m = "";
       for (String string : lines) {
         String row[] = string.split(",");
 
@@ -33,10 +34,10 @@ class Writter {
         String cadena = Float.toString(f);
         //String cadenita = String.valueOf(r);
         System.out.println("x: " + f + " y: " + row[1]);
-        System.out.println("r: " + r + ", Ángulo: " + theta);
-        String polarcito = ("r: " + r + ", Ángulo: " + theta);
-        Files.write(pathO, (polarcito).getBytes());
+        System.out.println("r: " + r + ", Ángulo: " + theta );
+        m += ("r: " + r + ", Ángulo: " + theta +"\n");
       }
+      Files.write(pathO, (m).getBytes());
     }
     catch(IOException e){
       System.err.println(e.getMessage());

@@ -25,7 +25,7 @@ public class ChessGUI extends PApplet {
   int PIXEL_SIZE = 50;
   List<Position> legalMoves = new LinkedList<>();
   Board board = Board.getInstance();
-  PImage black_bishop;
+
   PImage black_king;
   PImage black_knight;
   PImage black_pawn;
@@ -37,6 +37,7 @@ public class ChessGUI extends PApplet {
   PImage white_pawn;
   PImage white_queen;
   PImage white_rook;
+  PImage black_bishop;
 
   /**
   * Método main para la creación del juego
@@ -55,8 +56,7 @@ public class ChessGUI extends PApplet {
   @Override
   public void setup() {
     // legalMoves = board.getPiece(new Position(4,4)).getLegalMoves();
-    //System.out.println(board.getPiece(new Position(4, 4)).getLegalMoves());
-    black_bishop = loadImage(getClass().getResource("./black-bishop-50.png").getPath());
+    System.out.println(board.getPiece(new Position(4, 4)).getLegalMoves());
     black_king = loadImage(getClass().getResource("./black-king-50.png").getPath());
     black_knight = loadImage(getClass().getResource("./black-knight-50.png").getPath());
     black_pawn = loadImage(getClass().getResource("./black-pawn-50.png").getPath());
@@ -68,6 +68,7 @@ public class ChessGUI extends PApplet {
     white_pawn = loadImage(getClass().getResource("./white-pawn-50.png").getPath());
     white_queen = loadImage(getClass().getResource("./white-queen-50.png").getPath());
     white_rook = loadImage(getClass().getResource("./white-rook-50.png").getPath());
+    //black_bishop = loadImage(getClass().getResource("./black-bishop-50.png").getPath());
   }
 
   //Método draw para dibujar las piezas
