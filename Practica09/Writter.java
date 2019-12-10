@@ -8,6 +8,10 @@ import java.nio.file.Path;
 /**
 * Clase Writter para leer y escribir a escribir en archivos
 * en java a su vez que se manejan excepciones
+*
+* @version 21 de noviembre 2019
+*
+* @author Armando Ramírez González
 */
 class Writter {
 
@@ -31,7 +35,6 @@ class Writter {
         double r = Math.sqrt((f * f) + (f1 * f1));
         double theta = Math.atan2(f1,f);
 
-        String cadena = Float.toString(f);
         //String cadenita = String.valueOf(r);
         System.out.println("x: " + f + " y: " + row[1]);
         System.out.println("r: " + r + ", Ángulo: " + theta );

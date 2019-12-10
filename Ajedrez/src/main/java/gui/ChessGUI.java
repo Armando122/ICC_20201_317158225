@@ -49,7 +49,7 @@ public class ChessGUI extends PApplet {
   //Método setting para medida del marco
   @Override
   public void settings() {
-    size(400, 440);
+    size(400, 400);
   }
 
   //Métdo setup para crear y acomodar las piezas
