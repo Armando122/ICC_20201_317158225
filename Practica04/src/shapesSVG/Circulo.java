@@ -1,12 +1,15 @@
 package shapesSVG;
+
 /**
-* Clase que modela un círculo
+* Clase Circulo que modela un círculo en SVG.
 * @author Armando Ramírez González
+* @version 1.1.0
 */
 public class Circulo extends Shape{
-  //Atributos
-  private Vector2 centro;
-  private double radio;
+
+    /* Centro del circulo. */
+    private Vector2 centro;
+    private double radio;
 
   /**
   * Constructor de un círculo que no recibe parámetros.
@@ -48,13 +51,20 @@ public class Circulo extends Shape{
   }
 
   /**
-  * Método que regresa los valores del círculo en formato SVG
-  *
-  */
+   * Método que regresa los valores del círculo en formato SVG
+   * cx y cy indican las coordenadas del centro del círculo.
+   * r indica el radio del círculo en píxeles.
+   * stroke indica el color de la línea exterior que delimita la
+   *        figura.
+   * stroke-width indica el grosor de la línea exterior que delimita
+   *        la figura expresado en píxeles.
+   * fill indica el color del relleno de la figura.
+   */
   public String toSVG(){
-    String aux2 = "<circle cx='"+Double.toString(centro.getX())+"' cy='"
-    +Double.toString(centro.getY())+"' r='"
-    +Double.toString(this.radio)+"' stroke='green' stroke-width='4' fill='yellow' />";
+    String aux2 = ("<circle cx='"+Double.toString(centro.getX())
+                    +"' cy='"+Double.toString(centro.getY())
+                    +"' r='"+Double.toString(this.radio)
+                    +"' stroke='green' stroke-width='4' fill='yellow' />");
     return aux2;
   }
 

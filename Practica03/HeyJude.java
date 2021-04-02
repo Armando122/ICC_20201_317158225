@@ -1,11 +1,12 @@
-/*22 de agosto de 2019
-*Programa para armar la canción Hey Jude utilizando condicionales
-* if, while
-*/
 
+/**
+ * @version 22 de agosto de 2019
+ * Clase HeyJude: para armar la canción Hey Jude utilizando condicionales
+ * if, while y ciclo for.
+ */
 public class HeyJude{
 
-//Frases de la canción
+/* Frases de la canción. */
     public static String HEY = "Hey Jude ";
     public static String DON = "don't ";
     public static String MAK = "make it bad.";

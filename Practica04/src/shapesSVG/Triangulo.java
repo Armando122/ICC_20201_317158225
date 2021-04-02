@@ -63,14 +63,16 @@ public class Triangulo extends Shape implements Funcion{
   }
 
   /**
-  * Método para regresar el triángulo en formato SVG
-  *
-  */
+   * Método para regresar el triángulo en formato SVG
+   * @see Circulo para stroke, stroke-width y fill.
+   * polygon points es de la forma x1,y1 x2,y2 x3,y3
+   */
   public String toSVG(){
     String aux3 = "<polygon points='"+Double.toString(a.getX())+", "
-    +Double.toString(a.getY())+" "+Double.toString(b.getX())+", "
-    +Double.toString(b.getY())+" "+Double.toString(c.getX())+", "
-    +Double.toString(c.getY())+"' fill='green' stroke-width='3' stroke='RoyalBlue' />";
+                   +Double.toString(a.getY())+" "+Double.toString(b.getX())+", "
+                   +Double.toString(b.getY())+" "+Double.toString(c.getX())+", "
+                   +Double.toString(c.getY())
+                   +"' fill='green' stroke-width='3' stroke='RoyalBlue' />";
     return aux3;
   }
 

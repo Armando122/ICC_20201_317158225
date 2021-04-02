@@ -52,10 +52,18 @@ public class Rectangulo extends Shape{
 
   /**
   * Método para regresar el rectángulo en formato SVG
-  *
+  * @see Círculo para definir stroke, stroke-width y fill.
+  * x,y indican la coordenada de la esquina superior izquierda
+  *     del rectangulo.
+  * width indica el ancho del rectangulo.
+  * height indica la altura del rectangulo.
   */
   public String toSVG(){
-    String aux2 = "<rect x='"+Double.toString(a.getX())+"' y='"+Double.toString(a.getY())+"' width='"+Double.toString(this.ancho)+"' height='"+Double.toString(this.alto)+"' fill='RoyalBlue'/>";
+    String aux2 = ("<rect x='"+Double.toString(a.getX())
+                   +"' y='"+Double.toString(a.getY())
+                   +"' width='"+Double.toString(this.ancho)
+                   +"' height='"+Double.toString(this.alto)
+                   +"' fill='RoyalBlue'/>");
     return aux2;
   }
 

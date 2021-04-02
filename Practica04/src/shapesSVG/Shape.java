@@ -1,39 +1,48 @@
 package shapesSVG;
 
 /**
-* Creación de la clase abstracta Shape
+* Clase abstracta Shape.
+* @author Armando Ramirez González
 */
-public abstract class Shape implements Comparable <Shape>{
-  protected double area;
-  protected double perimetro;
+public abstract class Shape implements Comparable<Shape>{
 
-  public abstract String toSVG();
+    /* Área de la figura. */
+    protected double area;
+    /* Perímetro de la figura. */
+    protected double perimetro;
 
-  /**
-  * Método para obtener el área
-  */
-  public double getArea(){
-    return this.area;
-  }
+    /**
+     * Método toSVG.
+     * @return una cadena con el formato de la figura en SVG.
+     */
+    public abstract String toSVG();
 
-  /**
-  * Método para obtener el perímetro
-  */
-  public double getPerimetro(){
-    return this.perimetro;
-  }
+    /**
+     * Método getArea para obtener el área de la figura.
+     * @return double el área de la figura.
+     */
+    public double getArea(){
+      return this.area;
+    }
 
-  /**
-  * Método compareTo
-  * @param s = objeto de la clase Shape
-  * @return 1 si el área que compara es mayor a la de s
-  * @return 0 si las áreas son iguales
-  * @return -1 si el área de s es mayor a la que recibe
-  */
-  public int compareTo(Shape s){
-    if((this.area - s.getArea()) > 0)return 1;
-    if((this.area - s.getArea()) == 0) return 0;
-    if((this.area - s.getArea()) < 0) return -1;
-    return 0;
-  }
+    /**
+     * Método getPerimetro que devuelve el perímetro de la figura.
+     * @return double el perímetro de la figura.
+     */
+    public double getPerimetro(){
+      return this.perimetro;
+    }
+
+    /**
+     * Método compareTo
+     * @param figura figura con la que se va a comparar.
+     * @return 1 si el área que compara es mayor a la de figura
+     * 0 si las áreas son iguales y -1 si el área de figura es mayor a la que recibe.
+     */
+    public int compareTo(Shape figura){
+      if((this.area - s.getArea()) > 0)return 1;
+      if((this.area - s.getArea()) == 0) return 0;
+      if((this.area - s.getArea()) < 0) return -1;
+      return 0;
+    }
 }

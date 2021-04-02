@@ -79,7 +79,10 @@ public class Vector2 extends Shape{
   *
   */
   public String toSVG(){
-    String aux = "<circle cx='"+Double.toString(this.x)+"' cy='"+Double.toString(this.y)+"' r='"+Double.toString(this.magnitud)+"' fill='RoyalBlue'/>";
+    String aux = "<circle cx='"+Double.toString(this.x)
+                   +"' cy='"+Double.toString(this.y)
+                   +"' r='"+Double.toString(this.magnitud)
+                   +"' fill='RoyalBlue'/>";
     return aux;
   }
 
